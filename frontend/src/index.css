@@ -11,3 +11,158 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.pnf{
+  display: flex;
+  min-height: 65vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pnf-title{
+  font-size: 100px;
+  font-weight: 700;
+}
+.pnf-heading{
+  font-weight: normal;
+}
+.pnf-btn{
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: #ddd; /* Light gray color for links */
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #fff; /* White color on hover */
+}
+
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer h4 {
+  margin-bottom: 5px;
+}
+
+.footer p {
+  margin-top: 3px;
+}
+.footer{
+  color:white;
+  padding: 25px;
+  background: linear-gradient(to right,#434343,#000000);
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+.footer a:hover{
+  color:#ffefba;
+  border-bottom: 1px solid #ffefba;
+}
+
+.homepage-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.homepage-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.homepage-text {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.homepage-buttons button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.homepage-buttons button:hover {
+  background-color: #555;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  form {
+    padding: 10px;
+  }
+
+  input[type="text"],
+  select,
+  textarea {
+    padding: 6px;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  button[type="submit"] {
+    padding: 8px 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .response-table th,
+  .response-table td {
+    padding: 6px;
+  }
+
+  .response-list-heading {
+    font-size: 20px;
+  }
+}
