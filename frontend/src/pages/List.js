@@ -8,7 +8,7 @@ const ResponseList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/entry/entries');
+        const response = await axios.get('https://tuf-production.up.railway.app/api/entry/entries');
         setResponses(response.data.data); 
       } catch (error) {
         console.error('Error fetching responses:', error);
