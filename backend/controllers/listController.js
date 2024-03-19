@@ -4,7 +4,7 @@ const connection = require("../config/db")
 const getAllListController = async(req,res) =>{
     try {
 
-        const data = await connection.query('SELECT * from railway ORDER BY time_of_submission')
+        const data = await connection.query('SELECT * from data_table ORDER BY time_of_submission')
         res.status(200).send({
             success:true,
             message:'All Entries List',
