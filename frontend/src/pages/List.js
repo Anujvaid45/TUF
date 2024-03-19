@@ -4,6 +4,9 @@ import Layout from '../components/Layout';
 
 const ResponseList = () => {
   const [responses, setResponses] = useState([]);
+  const [selectedCode, setSelectedCode] = useState(null);
+  const [inputData, setInputData] = useState(null);
+  const [generatedOutput, setGeneratedOutput] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,6 +21,30 @@ const ResponseList = () => {
 
     fetchData(); // Fetch data when the component mounts
   }, []); // Empty dependency array ensures useEffect runs only once
+
+   // Function to handle click on source code
+   const handleSourceCodeClick = (code) => {
+    setSelectedCode(code);
+    document.body.classList.add('overlay-open');
+  };
+
+  const handleInputClick = (input) => {
+    setInputData(input);
+    document.body.classList.add('overlay-open');
+  };
+
+  const handleCloseSourceCode = () => {
+    setSelectedCode(null);
+    setGeneratedOutput(null);
+    setInputData(null);
+    document.body.classList.remove('overlay-open');
+  };
+
+   // Function to generate output
+   const handleGenerateOutput = async () => {
+    const dummyOutput = 'Dummy output for testing';
+    setGeneratedOutput(dummyOutput);
+  };
 
   return (
     <Layout>
@@ -39,13 +66,37 @@ const ResponseList = () => {
               <td>{response.username}</td>
               <td>{response.language}</td>
               <td>{response.input}</td>
-              <td>{response.source_code.substring(0, 100)}...</td>
+              {/* <td>{response.source_code.substring(0, 100)}...</td> */}
+              {/* Add onClick handler to open code display */}
+              <td onClick={(event) => {handleSourceCodeClick(response.source_code);handleInputClick(response.input)}} style={{cursor:"pointer"}}>
+                  {response.source_code.substring(0, 100)}...
+                </td>
               <td>{new Date(response.time_of_submission).toLocaleString()}</td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
+    {selectedCode && (
+        <div className="source-code-overlay">
+          <div className="source-code-box">
+            <h2>Full Source Code</h2>
+            <pre>{selectedCode}</pre>
+            <div>
+              <button onClick={handleGenerateOutput}>Generate Output</button>
+              <button onClick={handleCloseSourceCode}>Close</button>
+            </div>
+            {generatedOutput && (
+              <div className="generated-output">
+                <h3>Std Input</h3>
+                <pre>{inputData}</pre>
+                <h3>Generated Output</h3>
+                <pre>{generatedOutput}</pre>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </Layout>
   );
 };
