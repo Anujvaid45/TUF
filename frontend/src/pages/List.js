@@ -3,7 +3,7 @@ import axios from 'axios';
 import Layout from '../components/Layout';
 
 
-const key = process.env.REACT_APP_KEY;
+
 
 const ResponseList = () => {
   const [responses, setResponses] = useState([]);
@@ -13,7 +13,7 @@ const ResponseList = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(null);
   const [selectedLanguageId, setSelectedLanguageId] = useState(null);
   const [generatedOutput, setGeneratedOutput] = useState(null);
-
+  const key = process.env.REACT_APP_KEY;
   useEffect(() => {
     const fetchData = async () => {
       try {
