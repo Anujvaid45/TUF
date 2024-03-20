@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Layout from '../components/Layout';
+require('dotenv').config();
 
 const ResponseList = () => {
   const [responses, setResponses] = useState([]);
@@ -79,7 +80,7 @@ const ResponseList = () => {
         },
         headers: {
           'content-type': 'application/json',
-          'X-RapidAPI-Key': '5038e77965mshcd0e5d07d37ad03p16f207jsn5bc1c48beb31',
+          'X-RapidAPI-Key': process.env.KEY,
           'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com'
         },
         data: {
@@ -102,7 +103,7 @@ const ResponseList = () => {
           fields: '*'
         },
         headers: {
-          'X-RapidAPI-Key': '5038e77965mshcd0e5d07d37ad03p16f207jsn5bc1c48beb31',
+          'X-RapidAPI-Key': process.env.KEY,
           'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com'
         }
       };
