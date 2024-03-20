@@ -3,6 +3,8 @@ import axios from 'axios';
 import Layout from '../components/Layout';
 require('dotenv').config();
 
+const key = process.env.KEY;
+
 const ResponseList = () => {
   const [responses, setResponses] = useState([]);
   const [selectedCode, setSelectedCode] = useState(null);
@@ -80,7 +82,7 @@ const ResponseList = () => {
         },
         headers: {
           'content-type': 'application/json',
-          'X-RapidAPI-Key': process.env.KEY,
+          'X-RapidAPI-Key': key,
           'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com'
         },
         data: {
