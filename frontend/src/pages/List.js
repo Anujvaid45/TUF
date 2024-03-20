@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Layout from '../components/Layout';
-require('dotenv').config();
 
-const key = process.env.KEY;
+
+const key = process.env.REACT_APP_KEY;
 
 const ResponseList = () => {
   const [responses, setResponses] = useState([]);
