@@ -65,6 +65,7 @@ const ResponseList = () => {
     setSelectedLanguageId(null);
     document.body.classList.remove('overlay-open');
   };
+  
 
   // Function to generate output
   const handleGenerateOutput = async () => {
@@ -146,9 +147,17 @@ const ResponseList = () => {
                 <td>{response.language}</td>
                 <td>{response.input}</td>
                 {/* Add onClick handler to open code display */}
-                <td onClick={(event) => { handleSourceCodeClick(response.source_code); handleInputClick(response.input); handleLanguage(response.language) }} style={{ cursor: "pointer" }}>
-                  {response.source_code.substring(0, 100)}...
-                </td>
+                {/* <td className='source_code' onClick={(event) => { handleSourceCodeClick(response.source_code); handleInputClick(response.input); handleLanguage(response.language) }} style={{ cursor: "pointer" ,textDecoration:'underline'}}>
+                  {response.source_code.substring(0, 100)}
+                </td> */}
+                <td className='source_code' style={{ cursor: "pointer"}}>
+  {response.source_code.substring(0, 100)}
+    <button className='read_more_button' onClick={(event) => { handleSourceCodeClick(response.source_code); handleInputClick(response.input); handleLanguage(response.language) }}>
+      Read More
+    </button>
+  
+</td>
+
                 <td>{new Date(response.time_of_submission).toLocaleString()}</td>
               </tr>
             ))}
@@ -158,7 +167,7 @@ const ResponseList = () => {
       {selectedCode && (
         <div className="source-code-overlay">
           <div className="source-code-box">
-            <h2>Full source Code</h2>
+            <h2>Full source Code in {selectedLanguage}</h2>
             <pre>{selectedCode}</pre>
             <div>
               <button onClick={handleGenerateOutput}>Generate Output</button>
