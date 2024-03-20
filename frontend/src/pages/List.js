@@ -105,7 +105,7 @@ const ResponseList = () => {
           fields: '*'
         },
         headers: {
-          'X-RapidAPI-Key': process.env.KEY,
+          'X-RapidAPI-Key': key,
           'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com'
         }
       };
