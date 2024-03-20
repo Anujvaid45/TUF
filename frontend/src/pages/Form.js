@@ -17,6 +17,7 @@ const Form = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -55,7 +56,7 @@ const Form = () => {
       <select
         id="language"
         name="language"
-        value={formData.language}
+        value={formData.language_id}
         onChange={handleChange}
         required
       >
@@ -65,7 +66,7 @@ const Form = () => {
         <option value="JavaScript">JavaScript</option>
         <option value="Python">Python</option>
       </select>
-
+    
       <label htmlFor="input">Standard Input (stdin):</label>
       <textarea
         id="input"
