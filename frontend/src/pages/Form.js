@@ -73,7 +73,7 @@ const Form = () => {
         name="input"
         value={formData.input}
         onChange={handleChange}
-        required
+        
       ></textarea>
 
       <label htmlFor="source_code">Source Code:</label>
