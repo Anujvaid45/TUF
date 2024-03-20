@@ -12,26 +12,29 @@ code {
     monospace;
 }
 
-.pnf{
+.pnf {
   display: flex;
   min-height: 65vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.pnf-title{
-  font-size: 100px;
+
+.pnf-title {
+  font-size: 3.5vw; /* Responsive font size */
   font-weight: 700;
 }
-.pnf-heading{
+
+.pnf-heading {
   font-weight: normal;
 }
-.pnf-btn{
+
+.pnf-btn {
   color: black;
   border: 1px solid black;
   text-decoration: none;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 1.5vw; /* Responsive padding */
+  margin-top: 2vw; /* Responsive margin */
 }
 
 .navbar {
@@ -40,14 +43,14 @@ code {
   align-items: center;
   background-color: #333;
   color: #fff;
-  padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 2vw; /* Responsive padding */
+  box-shadow: 0 0.5vw 1.25vw rgba(0, 0, 0, 0.2); /* Responsive box shadow */
   z-index: 1000;
 }
 
 .navbar h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 2vw; /* Responsive font size */
 }
 
 nav ul {
@@ -58,7 +61,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 20px;
+  margin-right: 2vw; /* Responsive margin */
 }
 
 nav ul li:last-child {
@@ -66,105 +69,98 @@ nav ul li:last-child {
 }
 
 nav ul li a {
-  color: #ddd; /* Light gray color for links */
+  color: #ddd;
   text-decoration: none;
 }
 
 nav ul li a:hover {
-  color: #fff; /* White color on hover */
+  color: #fff;
 }
-
 
 .footer {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 2vw; /* Responsive margin */
+  padding: 2.5vw; /* Responsive padding */
+  background: linear-gradient(to right, #434343, #000000);
+  color: white;
 }
 
-.footer h4 {
-  margin-bottom: 5px;
-}
-
-.footer p {
-  margin-top: 3px;
-}
-.footer{
-  color:white;
-  padding: 25px;
-  background: linear-gradient(to right,#434343,#000000);
-}
-
-.footer a{
+.footer a {
   text-decoration: none;
   color: white;
-  padding: 10px;
+  padding: 1vw; /* Responsive padding */
 }
-.footer a:hover{
-  color:#ffefba;
-  border-bottom: 1px solid #ffefba;
+
+.footer a:hover {
+  color: #ffefba;
+  border-bottom: 0.1vw solid #ffefba; /* Responsive border bottom */
 }
 
 .homepage-container {
-  max-width: 800px;
+  max-width: 80vw; /* Responsive maximum width */
   margin: 0 auto;
-  padding: 20px;
+  padding: 2vw; /* Responsive padding */
 }
 
 .homepage-title {
-  font-size: 32px;
+  font-size: 3vw; /* Responsive font size */
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 2vw; /* Responsive margin */
 }
 
 .homepage-text {
-  font-size: 18px;
+  font-size: 2vw; /* Responsive font size */
   line-height: 1.5;
-  margin-bottom: 15px;
+  margin-bottom: 1.5vw; /* Responsive margin */
 }
 
 .homepage-buttons button {
-  padding: 10px 20px;
-  margin-right: 10px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  padding: 1vw 2vw; /* Responsive padding */
+  margin-right: 1vw; /* Responsive margin */
+}
+
+/* Responsive Table Styles */
+.response-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2vw; /* Responsive margin */
+}
+
+.response-table th,
+.response-table td {
+  padding: 1.2vw; /* Responsive padding */
+  border: 0.1vw solid #e2e8f0; /* Soft border color */
+}
+
+.response-table th {
+  background-color: #f7fafc;
+  color: #4a5568;
+  font-weight: bold;
+  text-align: left;
+}
+
+.response-table tbody tr:nth-child(even) {
+  background-color: #edf2f7;
+}
+
+.response-table tbody tr:hover {
+  background-color: #ebf8ff;
+}
+
+/* Read More Button Styles */
+.read_more_button {
+  background-color: transparent;
+  color: #4299e1;
+  border: 0.1vw solid #4299e1;
+  padding: 1vw 2vw; /* Responsive padding */
+  border-radius: 0.5vw; /* Responsive border radius */
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.homepage-buttons button:hover {
-  background-color: #555;
-}
-
-/* Responsive Styles */
-@media only screen and (max-width: 600px) {
-  form {
-    padding: 10px;
-  }
-
-  input[type="text"],
-  select,
-  textarea {
-    padding: 6px;
-  }
-
-  textarea {
-    height: 100px;
-  }
-
-  button[type="submit"] {
-    padding: 8px 16px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .response-table th,
-  .response-table td {
-    padding: 6px;
-  }
-
-  .response-list-heading {
-    font-size: 20px;
-  }
+.read_more_button:hover {
+  background-color: #4299e1;
+  color: #ffffff;
 }
 
 /* Overlay Styles */
@@ -174,113 +170,160 @@ nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999; /* Ensure the overlay appears above other content */
+  z-index: 999;
 }
 
 /* Source Code Box Styles */
 .source-code-box {
-  background-color: #ffffff; /* White background */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Soft box shadow */
+  background-color: #ffffff;
+  padding: 2vw; /* Responsive padding */
+  border-radius: 0.8vw; /* Responsive border radius */
+  box-shadow: 0px 0px 2vw rgba(0, 0, 0, 0.3);
   max-width: 90%;
   max-height: 90%;
   overflow: auto;
-  transition: max-height 0.5s ease; /* Smooth transition for max-height change */
+  transition: max-height 0.5s ease;
 }
 
 .source-code-box h2 {
-  margin-bottom: 15px; /* Increased space below heading */
-  color: #333333; /* Dark text color for headings */
-  font-size: 20px; /* Larger font size for headings */
+  margin-bottom: 2vw; /* Responsive margin */
+  color: #333333;
+  font-size: 1.5vw; /* Responsive font size */
 }
 
 .source-code-box pre {
   white-space: pre-wrap;
   word-wrap: break-word;
-  font-size: 16px; /* Increased font size for better readability */
-  line-height: 1.6; /* Line height for better spacing */
-  color: #333333; /* Dark text color */
+  font-size: 1.0vw; /* Responsive font size */
+  line-height: 1.6;
+  color: #333333;
 }
 
 .source-code-box button {
-  margin-right: 10px;
-  padding: 10px 20px; /* Larger padding for buttons */
+  margin-right: 1vw; /* Responsive margin */
+  padding: 1vw 2vw;
   border: none;
-  background-color: #007bff; /* Blue background color */
-  color: #ffffff; /* White text color */
-  border-radius: 5px;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 0.5vw;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .source-code-box button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
 }
 
 /* Generated Output Styles */
 .generated-output {
-  margin-top: 30px; /* Increased space above generated output section */
+  margin-top: 2vw; /* Responsive margin */
 }
 
 .generated-output h3 {
-  margin-bottom: 15px; /* Increased space below subheadings */
-  color: #333333; /* Dark text color for subheadings */
-  font-size: 18px; /* Larger font size for subheadings */
-}
-
-
-/* Table Styles */
-.response-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-.response-table th,
-.response-table td {
-  padding: 12px;
-  border: 1px solid #e2e8f0; /* Soft border color */
-}
-
-.response-table th {
-  background-color: #f7fafc; /* Light background color for headers */
-  color: #4a5568; /* Dark text color for headers */
-  font-weight: bold;
-  text-align: left;
-}
-
-.response-table tbody tr:nth-child(even) {
-  background-color: #edf2f7; /* Alternate row background color */
-}
-
-.response-table tbody tr:hover {
-  background-color: #ebf8ff; /* Hover row background color */
-}
-
-
-
-.read_more_button {
-  background-color: transparent;
-  color: #4299e1; /* Primary color for button text */
-  border: 1px solid #4299e1; /* Border color same as text color */
-  padding: 8px 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-
-.read_more_button:hover {
-  background-color: #4299e1; /* Background color on hover */
-  color: #ffffff; /* Text color on hover */
+  margin-bottom: 2vw; /* Responsive margin */
+  color: #333333;
+  font-size: 1.1vw; /* Responsive font size */
 }
 
 /* Body Styles */
 body.overlay-open {
-  overflow: hidden; /* Prevent scrolling when overlay is open */
+  overflow: hidden;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    padding: 3vw; /* Responsive padding */
+  }
+
+  .navbar h1 {
+    font-size: 3vw; /* Responsive font size */
+  }
+
+  nav ul li {
+    margin-right: 4vw; /* Responsive margin */
+  }
+
+  .footer {
+    padding: 5vw; /* Responsive padding */
+  }
+
+  .homepage-title {
+    font-size: 5vw; /* Responsive font size */
+    margin-bottom: 4vw; /* Responsive margin */
+  }
+
+  .homepage-text {
+    font-size: 2.5vw; /* Responsive font size */
+    margin-bottom: 3vw; /* Responsive margin */
+  }
+
+  .homepage-buttons button {
+    padding: 2vw 4vw; /* Responsive padding */
+    margin-right: 2vw; /* Responsive margin */
+  }
+
+  .source-code-box {
+    padding: 3vw; /* Responsive padding */
+    border-radius: 2vw; /* Responsive border radius */
+  }
+
+  .source-code-box h2 {
+    margin-bottom: 4vw; /* Responsive margin */
+    font-size: 6vw; /* Responsive font size */
+  }
+
+  .source-code-box pre {
+    font-size: 3vw; /* Responsive font size */
+  }
+
+  .source-code-box button {
+    padding: 2vw 4vw; /* Responsive padding */
+    border-radius: 1vw; /* Responsive border radius */
+  }
+
+  .generated-output h3 {
+    margin-bottom: 4vw; /* Responsive margin */
+    font-size: 3.6vw; /* Responsive font size */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .response-table th,
+  .response-table td {
+    padding: 1.2vw;
+  }
+
+  .response-list-heading {
+    font-size: 2.5vw; /* Responsive font size */
+  }
+
+  .source-code-box {
+    padding: 2vw; /* Responsive padding */
+    border-radius: 1.5vw; /* Responsive border radius */
+  }
+
+  .source-code-box h2 {
+    margin-bottom: 3vw; /* Responsive margin */
+    font-size: 3vw; /* Responsive font size */
+  }
+
+  .source-code-box pre {
+    font-size: 1.6vw; /* Responsive font size */
+  }
+
+  .source-code-box button {
+    padding: 1.5vw 3vw; /* Responsive padding */
+    border-radius: 1vw; /* Responsive border radius */
+  }
+
+  .generated-output h3 {
+    margin-bottom: 3vw; /* Responsive margin */
+    font-size: 2.4vw; /* Responsive font size */
+  }
 }
 
