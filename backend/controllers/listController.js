@@ -31,8 +31,6 @@ const createEntryController = async(req,res)=>{
                 return res.status(500).send({error:'username is required'})
             case !language:
                 return res.status(500).send({error:'Language is required'})
-            case !input:
-                return res.status(500).send({error:'Input is required'})
             case !source_code:
                 return res.status(500).send({error:'Source Code is required'})           
         }
